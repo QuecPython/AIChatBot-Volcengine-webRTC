@@ -43,14 +43,9 @@ QuecPython 推出了基于豆包 webRTC 的 AI 聊天机器人解决方案。该
 在开始之前，请确保您具备以下先决条件：
 
 - **硬件：**
-  - [EC600MCNLE QuecPython 标准开发板](https://python.quectel.com/doc/Getting_started/zh/evb/ec600x-evb.html)（含天线、Type-C 数据线等）
-    > - 点击查看开发板的[原理图](https://images.quectel.com/python/2023/05/EC600X_EVB_V3.2-SCH.pdf)和[丝印图](https://images.quectel.com/python/2023/05/EC600X_EVB_V3.2-丝印.pdf)文档。
-    > - [移远商城购买链接](https://www.quecmall.com/goods-detail/2c90800c916a8eb501918d85528b017b)
+  - EC800MCNLE QuecDuino 开发板（含天线、Type-C 数据线等）
+    > - [点此购买开发板套件](https://www.quecmall.com/goods-detail/2c90800c94028da20194824724370127)
   - 电脑（Windows 7、Windows 10 或 Windows 11）
-  - LCD 显示屏
-    - 型号：ST7789
-    - 分辨率：240×240
-    - [移远商城购买链接](https://www.quecmall.com/goods-detail/2c90800b9488359c01951d6700700116)
   - 喇叭
     - 任意 2-5W 功率的喇叭即可
     - [移远商城购买链接](https://www.quecmall.com/goods-detail/2c90800c94028da201948249e9f4012d)
@@ -83,16 +78,17 @@ QuecPython 推出了基于豆包 webRTC 的 AI 聊天机器人解决方案。该
    按照下图进行硬件连接：
    <img src="./docs/zh/media/wire_connection.jpg" style="zoom:67%;" /> 
    1. 将喇叭连接至图中标识有`SPK+`和`SPK-`的排针上。
-   2. 将 LCD 屏连接至标识有 `LCD` 字样的排针上。
-   3. 在图示位置插入可用的 Nano SIM 卡。
-   4. 将天线连接至标识有`LTE`字样的天线连接座上。
-   5. 使用 Type-C 数据线连接开发板和电脑。
+   2. 在图示位置插入可用的 Nano SIM 卡。
+   3. 将天线连接至标识有`LTE`字样的天线连接座上。
+   4. 使用 Type-C 数据线连接开发板和电脑。
 
 2. **将代码下载到设备：**
    - 启动 QPYcom 调试工具。
    - 将数据线连接到计算机。
    - 按下开发板上的 **PWRKEY** 按钮启动设备。
    - 按照[说明](https://python.quectel.com/doc/Application_guide/zh/dev-tools/QPYcom/qpycom-dw.html#%E4%B8%8B%E8%BD%BD%E8%84%9A%E6%9C%AC)将 `code` 文件夹中的所有文件导入到模块的文件系统中，保留目录结构。
+
+> 注意： 如果需要提高mic的灵敏度，避免说话识别错误，请将 nvm 文件夹下的 audio_gain.nvm 和 audio_ve.nvm 文件导入到模块文件系统的 /usr 目录中。
 
 3. **运行应用程序：**
    - 选择 `File` 选项卡。
@@ -103,12 +99,11 @@ QuecPython 推出了基于豆包 webRTC 的 AI 聊天机器人解决方案。该
 ```python
 import example
 >>> example.exec('/usr/ai_main.py')
-window show over
-volume: 6
+volume: 11
 >>> lte network normal
 ai task running
 
-# 按KEY1键进入智能体
+# 按KEY S3键进入智能体
 rtc_queue key event 1
 start rtc
 TIKTOK_RTC_EVENT_START
@@ -125,7 +120,7 @@ TIKTOK_RTC_EVENT_TTS_TEXT 你好有什么可以帮到你
 TIKTOK_RTC_EVENT_TTS_TEXT 你好有什么可以帮到你的
 TIKTOK_RTC_EVENT_TTS_TEXT 你好有什么可以帮到你的吗
 
-# 按KEY2键退出智能体
+# 按KEY S2键退出智能体
 rtc_queue key event 2
 stop rtc
 ```
@@ -154,7 +149,6 @@ solution-AI/
 │   └── examples_ai.py
 ├── docs/zh/media/
 │           └── wire_connection.jpg
-├── EC600MCNLER06A01M08_OCPU_QPY_TEST0213.zip
 ├── LICENSE
 ├── readme.md
 └── readme_zh.md

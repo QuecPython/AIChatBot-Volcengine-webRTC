@@ -93,8 +93,6 @@ if __name__ == "__main__":
     
     # 启动后台任务调度器
     scheduler.start()
-    
-    print('window show over')
 
     tiktok = TiktokRTC(300000, ai_callback)
     GPIO39 = Pin(PA, Pin.OUT, Pin.PULL_DISABLE, 0)
