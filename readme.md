@@ -12,6 +12,7 @@
 - [贡献](#贡献)
 - [许可证](#许可证)
 - [支持](#支持)
+- [致谢](#致谢)
 
 ## 介绍
 
@@ -171,3 +172,7 @@ solution-AI/
 ## 支持
 
 如果您有任何问题或需要支持，请参阅 [QuecPython 文档](https://python.quectel.com/doc) 或在本仓库中打开一个 issue。
+
+## 致谢
+
+感谢 [yfpan](https://github.com/kkongling) 对本仓库的贡献，帮助支持了 EC800M QuecDuino 开发板！
