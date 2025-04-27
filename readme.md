@@ -2,17 +2,19 @@
 
 ## 目录
 
-- [介绍](#介绍)
-- [功能特性](#功能特性)
-- [快速开始](#快速开始)
-  - [先决条件](#先决条件)
-  - [安装](#安装)
-  - [运行应用程序](#运行应用程序)
-- [目录结构](#目录结构)
-- [贡献](#贡献)
-- [许可证](#许可证)
-- [支持](#支持)
-- [致谢](#致谢)
+- [QuecPython 基于豆包 webRTC 的 AI 聊天机器人](#quecpython-基于豆包-webrtc-的-ai-聊天机器人)
+  - [目录](#目录)
+  - [介绍](#介绍)
+  - [功能特性](#功能特性)
+  - [快速开始](#快速开始)
+    - [先决条件](#先决条件)
+    - [安装](#安装)
+    - [运行应用程序](#运行应用程序)
+  - [目录结构](#目录结构)
+  - [贡献](#贡献)
+  - [许可证](#许可证)
+  - [支持](#支持)
+  - [致谢](#致谢)
 
 ## 介绍
 
@@ -44,7 +46,7 @@ QuecPython 推出了基于豆包 webRTC 的 AI 聊天机器人解决方案。该
 在开始之前，请确保您具备以下先决条件：
 
 - **硬件：**
-  - EC800MCNLE QuecDuino 开发板（含天线、Type-C 数据线等）
+  - EC800MCNLE / EC800MCNGB QuecDuino 开发板（含天线、Type-C 数据线等）
     > - [点此购买开发板套件](https://www.quecmall.com/goods-detail/2c90800c94028da20194824724370127)
   - 电脑（Windows 7、Windows 10 或 Windows 11）
   - 喇叭
@@ -54,7 +56,9 @@ QuecPython 推出了基于豆包 webRTC 的 AI 聊天机器人解决方案。该
 - **软件：**
   - QuecPython 模块的 USB 驱动：[QuecPython_USB_Driver_Win10_ASR](https://images.quectel.com/python/2023/04/Quectel_Windows_USB_DriverA_Customer_V1.1.13.zip)
   - 调试工具 [QPYcom](https://images.quectel.com/python/2022/12/QPYcom_V3.6.0.zip)
-  - QuecPython [固件](https://github.com/QuecPython/AIChatBot-Volcengine-webRTC/releases/download/v1.0.1/EC800MCNLER06A08M08_OCPU_QPY_TEST0219.zip)
+  - QuecPython 固件
+    - [EC800MCNLE](https://github.com/QuecPython/AIChatBot-Volcengine-webRTC/releases/download/v1.0.1/EC800MCNLER06A08M08_OCPU_QPY_TEST0219.zip)
+    - [EC800MCNGB](https://github.com/QuecPython/AIChatBot-Volcengine-webRTC/releases/download/v1.0.1/EC800MCNGBR06A01M08_OCPU_QPY_TEST0303.zip)
   - Python 文本编辑器（例如，[VSCode](https://code.visualstudio.com/)、[Pycharm](https://www.jetbrains.com/pycharm/download/)）
 
 ### 安装
@@ -71,7 +75,9 @@ QuecPython 推出了基于豆包 webRTC 的 AI 聊天机器人解决方案。该
 3. **烧录固件：**
    按照[说明](https://python.quectel.com/doc/Application_guide/zh/dev-tools/QPYcom/qpycom-dw.html#%E4%B8%8B%E8%BD%BD%E5%9B%BA%E4%BB%B6)将固件烧录到开发板上。
 
-> 注意：固件内火山对话 token 临时测试使用，随时可能取消，使用体验可以联系移远技术支持。
+> 注意：  
+> 固件内火山对话 token 临时测试使用，随时可能取消，使用体验可以联系移远技术支持。  
+> 大模型对接调优持续演进，对于需要大模型调优可以联系移远技术支持。  
 > 如果自己有火山 token，可以直接通过`tiktok.config`接口配置即可。
 
 ### 运行应用程序
