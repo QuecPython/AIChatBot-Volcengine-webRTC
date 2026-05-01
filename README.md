@@ -6,14 +6,14 @@
 
 - [Features](#Features)
 
-- [Quick Start](#Quick Start)
+- [Quick Start](#Quick-Start)
     - [Prerequisites](#Prerequisites)
     
     - [Installation](#Installation)
     
-    - [Running the Application](#Running the Application)
+    - [Running the Application](#Running-the-Application)
     
-- [Directory Structure](#Directory Structure)
+- [Directory Structure](#Directory-Structure)
 
 - [Contributing](#Contributing)
 
@@ -65,11 +65,11 @@ Before you begin, please ensure you have the following prerequisites:
         > 
         > - [QuecMall Purchase Link](https://www.quecmall.com/goods-detail/2c90800c916a8eb501918d85528b017b)
         > 
-        
+    
 - Computer \(Windows 7, Windows 10, or Windows 11\)
-    
+  
 - LCD Display
-    
+  
     - Model: ST7789
         - Resolution: 240×240
     
